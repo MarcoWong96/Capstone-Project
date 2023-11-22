@@ -19,9 +19,9 @@ This model will benefit multiple stakeholders within football. It offers clubs a
 --------------------------------------------------------
 Notebooks (FOLDER)<br>
 -- EDA<br> 
--- MODELLING<br>
--- MODELLING 2<br>
--- MODELLING 3<br>
+-- Modelling<br>
+-- Modelling 2<br>
+-- Modelling 3<br>
 -- Data (FOLDER)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;-- 2021-2022 Football Player Stats.csv<br>
 &nbsp;&nbsp;&nbsp;&nbsp;-- 2022-2023 Football Player Stats.csv<br>
@@ -38,11 +38,11 @@ Presentations (FOLDER)<br>
 
 ### Datasets
 --------------------------------------------------------
--- 2021-2022 Football Player Stats.csv
--- 2022-2023 Football Player Stats.csv
--- player_valuations.csv
--- players.csv
--- Transfer fees.csv (to be found)
+-- 2021-2022 Football Player Stats.csv<br>
+-- 2022-2023 Football Player Stats.csv<br>
+-- player_valuations.csv<br>
+-- players.csv<br>
+-- Transfer fees.csv (to be found)<br>
 
 
 
