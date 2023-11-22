@@ -18,21 +18,21 @@ This model will benefit multiple stakeholders within football. It offers clubs a
 ### Project Organization (In progress)
 --------------------------------------------------------
 Notebooks (FOLDER)
-    -- EDA
-    -- MODELLING
-    -- MODELLING 2
-    -- MODELLING 3
-    -- Data (FOLDER)
-        -- 2021-2022 Football Player Stats.csv
-        -- 2022-2023 Football Player Stats.csv
-        -- player_valuations.csv
-        -- players.csv
-        -- Transfer fees (to be found)
+    - EDA
+    - MODELLING
+    - MODELLING 2
+    - MODELLING 3
+    - Data (FOLDER)
+        - 2021-2022 Football Player Stats.csv
+        - 2022-2023 Football Player Stats.csv
+        - player_valuations.csv
+        - players.csv
+        - Transfer fees (to be found)
 
 Presentations (FOLDER)
-    -- Presentation 1
-    -- Presentation 2
-    -- Presentation 3
+    - Presentation 1
+    - Presentation 2
+    - Presentation 3
 
 
 
