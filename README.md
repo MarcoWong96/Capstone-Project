@@ -22,9 +22,10 @@ This model will benefit multiple stakeholders within football. It offers clubs a
 ### Project Organization
 --------------------------------------------------------
 Notebooks (FOLDER)<br>
--- Initial_EDA					<- Notebook 1 - Initial EDA and data cleaning<br> 
--- FinalEDA_InitialModeling			<- Notebook 2 - Additional EDA, data preprocessing and data cleaning<br>	
--- Final_Modeling				<- Notebook 3 - Final EDA, data modeling, evaluation and conclusion
+-- Inspiration.ipynb					<- Notebook 0 - Inspiration for this project, initial thoughts
+-- Initial_EDA.ipynb					<- Notebook 1 - Initial EDA and data cleaning<br> 
+-- FinalEDA_InitialModeling.ipynb			<- Notebook 2 - Additional EDA, data preprocessing and data cleaning<br>	
+-- Final_Modeling.ipynb					<- Notebook 3 - Final EDA, data modeling, evaluation and conclusion
 -- Data (FOLDER)<br>
 &nbsp;&nbsp;-- 2021-2022 Football Player Stats.csv<br>
 &nbsp;&nbsp;-- 2022-2023 Football Player Stats.csv<br>
@@ -33,12 +34,18 @@ Notebooks (FOLDER)<br>
 &nbsp;&nbsp;-- Created DataFrames (FOLDER)<br>
 
 Presentations (FOLDER)<br>
--- Presentation_1				<- Presentation 1 - Scope of project and basic EDA<br>
--- Presentation_2				<- Presentation 2 - Data preprocessing and baseline modeling<br>
--- Final_Presentation				<- Final Presentation - Project overview and results<br>
+-- Presentation_1.pdf					<- Presentation 1 - Scope of project and basic EDA<br>
+-- Presentation_2.pdf					<- Presentation 2 - Data preprocessing and baseline modeling<br>
+-- Final_Presentation.pdf				<- Final Presentation - Project overview and results<br>
 
--- environment_export.yml 			<- Required environment file to run packages
--- README.md					<- Readme file for project
+App_Demo (FOLDER) <br>
+-- app.py						<- Streamlit app
+-- final_model.pkl					<- pkl file for streamlit app
+-- scaler.pkl						<- pkl file for streamlit app
+-- shap_explainer.pkl					<- pkl file for streamlit app
+	
+-- environment_export.yml 				<- Required environment file to run packages
+-- README.md						<- Readme file for project
 
 
 ### Datasets (4 original Datasets from Kaggle)
