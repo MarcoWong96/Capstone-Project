@@ -40,13 +40,13 @@ Presentations (FOLDER)<br>
 -- Final_Presentation.pdf				<- Final Presentation - Project overview and results<br>
 
 App_Demo (FOLDER) <br>
--- app.py						<- Streamlit app
--- final_model.pkl					<- pkl file for streamlit app
--- scaler.pkl						<- pkl file for streamlit app
--- shap_explainer.pkl					<- pkl file for streamlit app
+-- app.py						<- Streamlit app<br>
+-- final_model.pkl					<- pkl file for streamlit app<br>
+-- scaler.pkl						<- pkl file for streamlit app<br>
+-- shap_explainer.pkl					<- pkl file for streamlit app<br>
 	
--- environment_export.yml 				<- Required environment file to run packages
--- README.md						<- Readme file for project
+-- environment_export.yml 				<- Required environment file to run packages<br>
+-- README.md						<- Readme file for project<br>
 
 
 ### Datasets (4 original Datasets from Kaggle)
@@ -73,9 +73,13 @@ App_Demo (FOLDER) <br>
 ### Dataset Introduction
 ---------------------------
 In this project, we will be using 4 datasets, all of which are obtained from Kaggle.<br>
+
 -- 2021-2022 Player Statistics. This is a dataset which contains each players in season statistics over the course of 2021-2022 season. This is for players in the top 5 leagues.<br>
+
 -- 2022-2023 Player Statistics. This is same as above dataset, except for 2022-2023 season. The source for these two datasets are the same.<br>
+
 -- Player Valuation. This dataset contains player valuation for each player over the last 20 years. Only player ID is shown here, not player name. This dataset is from a different source than above datasets.
+
 -- Player name. This comes from the same source as player valuation. This dataset has player id, with respective player name and certain attributes, such as height of player.
 
 
