@@ -18,7 +18,7 @@ My aim is to develop a model that uses the players last season statistics to pre
 
 This model will benefit multiple stakeholders within football. It offers clubs a reliable method to aseess player value, aiding in the valuation of potential signings and providing insights into the worth of their existing players. By offering enhanced information, this model equips clubs with valuable data that can inform their decision making processes. The potential impact is enormous - a financially sustainable club that can divert their finances to other operations. Additionally, fan relations may improve greatly.
 
-
+```
 Project Directory
 │
 ├── Notebooks
@@ -48,7 +48,7 @@ Project Directory
 │
 ├── environment_export.yml              <- Required environment file to run packages
 └── README.md                           <- Readme file for project
-
+```
 
 ### Datasets (4 original Datasets from Kaggle)
 --------------------------------------------------------
