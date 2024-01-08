@@ -13,7 +13,11 @@ loaded_scaler = joblib.load('scaler.pkl')
 st.title("Projecting Player Valuation using Statistics")
 
 # Descriptor
-st.write('This app will predict a football players valuation. Please adjust the statistics on the left to required statistics.')
+st.write('''This application will predict a football player's valuation. 
+This model has been derived from a gradient boosting algorithm, combined with Recursive Feature Engineering, 
+on player statistics dataset from the 2021 to 2023 seasons. 
+The valuations modelled against is directly from TransferMarkt. 
+\n\nTo use this model, please adjust the statistics on the left to the required levels.''')
 
 # Set X_train_select
 df_columns = ['Comp_Premier League', 'Team_Middle', 'Team_Top', 'Age', 'Starts',
@@ -73,7 +77,13 @@ def main():
     # Display input sliders
     st.sidebar.write('Slider scale')
 
-    # Create input fields for numeric features
+    # Convert specific slider values to floats for step=0.5
+    feature11 = st.sidebar.slider('SCA', min_value=0.0, max_value=5.0, value=2.0, step=0.5)
+    feature12 = st.sidebar.slider('ScaPassLive', min_value=0.0, max_value=5.0, value=2.0, step=0.5)
+    feature13 = st.sidebar.slider('GCA', min_value=0.0, max_value=4.0, value=1.0, step=0.5)
+    feature19 = st.sidebar.slider('AerWon', min_value=0.0, max_value=10.0, value=3.0, step=0.5)
+
+    # Sliders with integer values
     feature1 = st.sidebar.slider('Age', min_value=18, max_value=40, value=25)
     feature2 = st.sidebar.slider('Starts', min_value=0, max_value=38, value=20)
     feature6 = st.sidebar.slider('90s', min_value=0, max_value=38, value=20)
@@ -81,15 +91,12 @@ def main():
     feature8 = st.sidebar.slider('Shots', min_value=0, max_value=5, value=1)
     feature9 = st.sidebar.slider('PasTotCmp%', min_value=0, max_value=100, value=50)
     feature10 = st.sidebar.slider('PasMedCmp%', min_value=0, max_value=100, value=50)
-    feature11 = st.sidebar.slider('SCA', min_value=0, max_value=20, value=10)
-    feature12 = st.sidebar.slider('ScaPassLive', min_value=0, max_value=20, value=10)
-    feature13 = st.sidebar.slider('GCA', min_value=0, max_value=20, value=5)
-    feature14 = st.sidebar.slider('TouAtt3rd', min_value=0, max_value=100, value=15)
-    feature15 = st.sidebar.slider('TouAttPen', min_value=0, max_value=50, value=10)
-    feature16 = st.sidebar.slider('TouLive', min_value=0, max_value=150, value=40)
-    feature17 = st.sidebar.slider('Rec', min_value=0, max_value=150, value=30)
-    feature18 = st.sidebar.slider('Recov', min_value=0, max_value=35, value=10)
-    feature19 = st.sidebar.slider('AerWon', min_value=0, max_value=20, value=5)
+    feature14 = st.sidebar.slider('TouAtt3rd', min_value=0, max_value=50, value=20)
+    feature15 = st.sidebar.slider('TouAttPen', min_value=0, max_value=10, value=3)
+    feature16 = st.sidebar.slider('TouLive', min_value=0, max_value=100, value=40)
+    feature17 = st.sidebar.slider('Rec', min_value=0, max_value=100, value=30)
+    feature18 = st.sidebar.slider('Recov', min_value=0, max_value=30, value=10)
+
 
     # Create a callback for live updates
     @st.cache_data()
@@ -105,7 +112,7 @@ def main():
                            feature16, feature17, feature18, feature19, 1 if feature20 else 0]).reshape(1, -1)
 
     # Display the prediction
-    st.success(f'Predicted Valuation: {np.round(np.exp(predict_valuation(user_input)[0])/1_000_000, 1)} Million €')
+    st.success('## Predicted Valuation: {:.1f} Million €'.format(np.round(np.exp(predict_valuation(user_input)[0])/1_000_000, 1)))
 
     # Write description
     st.write('The below graph shows the effect of each statistic on the players valuation.')

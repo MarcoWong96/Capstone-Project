@@ -271,7 +271,11 @@ Overall, this project offers a solution to measure football player valuation. Wh
 Next steps in this project will be to improve model accuracy by additional hyperparameter tuning. Neural networks can be further investigated as it showed heavy overfitting in my testing. Potentially supplementing additional data such as marketing potential, player wages, contract length, may also improve the model. We can also try find player transfers that occurred in the last two years and compare our model against that. Lastly, we can try to develop an application that can input these features and produce an accurate valuation. This will be extremely useful for scouts and football clubs alike. However, we do need to further investigate the ethical implications of such a tool as we are putting a monetary value on people. In the wrong hands, this could further causes such as player trafficking, which is a rampant issue in lesser developed countries.
 
 
+### App Demo
+--------------------------------------------------------
+To use the app demo, create a new environment using the environments_export.yml file. Activate the new environment. Download all the files in the App_Demo folder and change the terminal  directory to the folder containing the downloaded files. Open the app.py file by typing `streamlit run app.py`. 
 
+This app demo is a potential use case for this model. It is using our simplified gradient booster model which only takes 20 features. 
 
 
 
