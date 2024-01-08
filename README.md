@@ -19,34 +19,35 @@ My aim is to develop a model that uses the players last season statistics to pre
 This model will benefit multiple stakeholders within football. It offers clubs a reliable method to aseess player value, aiding in the valuation of potential signings and providing insights into the worth of their existing players. By offering enhanced information, this model equips clubs with valuable data that can inform their decision making processes. The potential impact is enormous - a financially sustainable club that can divert their finances to other operations. Additionally, fan relations may improve greatly.
 
 
-### Project Organization
---------------------------------------------------------
-Notebooks (FOLDER)<br>
--- Inspiration.ipynb					<- Notebook 0 - Inspiration for this project, initial thoughts<br>
--- Initial_EDA.ipynb					<- Notebook 1 - Initial EDA and data cleaning<br> 
--- FinalEDA_InitialModeling.ipynb			<- Notebook 2 - Additional EDA, data preprocessing and data cleaning<br>	
--- Final_Modeling.ipynb					<- Notebook 3 - Final EDA, data modeling, evaluation and conclusion<br>
-
--- Data (FOLDER)<br>
-&nbsp;&nbsp;-- 2021-2022 Football Player Stats.csv<br>
-&nbsp;&nbsp;-- 2022-2023 Football Player Stats.csv<br>
-&nbsp;&nbsp;-- player_valuations.csv<br>
-&nbsp;&nbsp;-- players.csv<br>
-&nbsp;&nbsp;-- Created DataFrames (FOLDER)<br>
-
-Presentations (FOLDER)<br>
--- Presentation_1.pdf					<- Presentation 1 - Scope of project and basic EDA<br>
--- Presentation_2.pdf					<- Presentation 2 - Data preprocessing and baseline modeling<br>
--- Final_Presentation.pdf				<- Final Presentation - Project overview and results<br>
-
-App_Demo (FOLDER) <br>
--- app.py						<- Streamlit app<br>
--- final_model.pkl					<- pkl file for streamlit app<br>
--- scaler.pkl						<- pkl file for streamlit app<br>
--- shap_explainer.pkl					<- pkl file for streamlit app<br>
-	
--- environment_export.yml 				<- Required environment file to run packages<br>
--- README.md						<- Readme file for project<br>
+Project Directory
+│
+├── Notebooks
+│   ├── Inspiration.ipynb               <- Notebook 0 - Inspiration for this project, initial thoughts
+│   ├── Initial_EDA.ipynb               <- Notebook 1 - Initial EDA and data cleaning
+│   ├── FinalEDA_InitialModeling.ipynb  <- Notebook 2 - Additional EDA, data preprocessing, and cleaning
+│   └── Final_Modeling.ipynb            <- Notebook 3 - Final EDA, data modeling, evaluation, and conclusion
+│
+├── Data
+│   ├── 2021-2022 Football Player Stats.csv
+│   ├── 2022-2023 Football Player Stats.csv
+│   ├── player_valuations.csv
+│   ├── players.csv
+│   └── Created DataFrames
+│
+├── Presentations
+│   ├── Presentation_1.pdf              <- Presentation 1 - Scope of project and basic EDA
+│   ├── Presentation_2.pdf              <- Presentation 2 - Data preprocessing and baseline modeling
+│   └── Final_Presentation.pdf          <- Final Presentation - Project overview and results
+│
+├── App_Demo
+│   ├── app.py                          <- Streamlit app
+│   ├── final_model.pkl                 <- pkl file for Streamlit app
+│   ├── scaler.pkl                      <- pkl file for Streamlit app
+│   ├── shap_explainer.pkl              <- pkl file for Streamlit app
+│   └── (other necessary files)
+│
+├── environment_export.yml              <- Required environment file to run packages
+└── README.md                           <- Readme file for project
 
 
 ### Datasets (4 original Datasets from Kaggle)
