@@ -43,8 +43,8 @@ Project Directory
 │   ├── app.py                          <- Streamlit app
 │   ├── final_model.pkl                 <- pkl file for Streamlit app
 │   ├── scaler.pkl                      <- pkl file for Streamlit app
-│   ├── shap_explainer.pkl              <- pkl file for Streamlit app
-│   └── (other necessary files)
+│   └── shap_explainer.pkl              <- pkl file for Streamlit app
+│   
 │
 ├── environment_export.yml              <- Required environment file to run packages
 └── README.md                           <- Readme file for project
@@ -52,36 +52,36 @@ Project Directory
 
 ### Datasets (4 original Datasets from Kaggle)
 --------------------------------------------------------
--- 2021-2022 Football Player Stats.csv (2921 rows x 143 columns)<br>
--- https://www.kaggle.com/datasets/vivovinco/20212022-football-player-stats/data<br>
--- 2022-2023 Football Player Stats.csv (2689 rows x 124 columns)<br>
--- https://www.kaggle.com/datasets/vivovinco/20222023-football-player-stats/code<br>
--- player_valuations.csv (440643 rows x 9 columns)<br>
--- https://www.kaggle.com/datasets/davidcariboo/player-scores?select=player_valuations.csv<br>
--- players.csv (30302 rows x 23 columns)<br>
--- https://www.kaggle.com/datasets/davidcariboo/player-scores?select=players.csv<br>
+* 2021-2022 Football Player Stats.csv (2921 rows x 143 columns)<br>
+* https://www.kaggle.com/datasets/vivovinco/20212022-football-player-stats/data<br>
+* 2022-2023 Football Player Stats.csv (2689 rows x 124 columns)<br>
+* https://www.kaggle.com/datasets/vivovinco/20222023-football-player-stats/code<br>
+* player_valuations.csv (440643 rows x 9 columns)<br>
+* https://www.kaggle.com/datasets/davidcariboo/player-scores?select=player_valuations.csv<br>
+* players.csv (30302 rows x 23 columns)<br>
+* https://www.kaggle.com/datasets/davidcariboo/player-scores?select=players.csv<br>
 
 
 ### Table of Contents
 --------------------------------------------------------
--- Dataset introduction<br>
--- Data dictionary<br>
--- Preprocessing & Data Cleaning<br>
--- EDA<br>
--- Modeling<br>
--- Conclusions<br>
+* Dataset introduction<br>
+* Data dictionary<br>
+* Preprocessing & Data Cleaning<br>
+* EDA<br>
+* Modeling<br>
+* Conclusions<br>
 
 ### Dataset Introduction
 ---------------------------
 In this project, we will be using 4 datasets, all of which are obtained from Kaggle.<br>
 
--- 2021-2022 Player Statistics. This is a dataset which contains each players in season statistics over the course of 2021-2022 season. This is for players in the top 5 leagues.<br>
+* 2021-2022 Player Statistics. This is a dataset which contains each players in season statistics over the course of 2021-2022 season. This is for players in the top 5 leagues.<br>
 
--- 2022-2023 Player Statistics. This is same as above dataset, except for 2022-2023 season. The source for these two datasets are the same.<br>
+* 2022-2023 Player Statistics. This is same as above dataset, except for 2022-2023 season. The source for these two datasets are the same.<br>
 
--- Player Valuation. This dataset contains player valuation for each player over the last 20 years. Only player ID is shown here, not player name. This dataset is from a different source than above datasets.
+* Player Valuation. This dataset contains player valuation for each player over the last 20 years. Only player ID is shown here, not player name. This dataset is from a different source than above datasets.
 
--- Player name. This comes from the same source as player valuation. This dataset has player id, with respective player name and certain attributes, such as height of player.
+* Player name. This comes from the same source as player valuation. This dataset has player id, with respective player name and certain attributes, such as height of player.
 
 
 ### Data Dictionary
@@ -219,10 +219,10 @@ This is our data dictionary from our initial datasets.<br>
 The goal of the preprocessing and cleaning phase of this project is to merge the dataframes and produce a final dataframe with the respective players, their statistics and their valuation. This process has been the most time consuming element of the project. This is largely due to merging multiple different dataframes, each with it's own method of storing names. As we needed to merge on the players names, this required a lot of cleaning and meticulous checks.
 
 There were multiple merges we needed for our dataset:<br>
--- player name and player valuation (on player id)<br>
--- player statistics 2021-2022 and player name/valuation (on player name)<br> 
--- player statistics 2022-2023 and player name/valuation (on player name)<br>
--- player statistics (merged vertically)<br>
+* player name and player valuation (on player id)<br>
+* player statistics 2021-2022 and player name/valuation (on player name)<br> 
+* player statistics 2022-2023 and player name/valuation (on player name)<br>
+* player statistics (merged vertically)<br>
 
 After all dataset merging, preprocessing and cleaning, we had a final dataframe consisting 5422 rows and 128 columns. This dataframe will be used for our models.
 
@@ -230,8 +230,8 @@ After all dataset merging, preprocessing and cleaning, we had a final dataframe 
 ### Exploratory Data Analysis (EDA)
 --------------------------------------------------------
 As our player statistics and player valuation datasets are all seperated, our initial exploratory data analysis (EDA) largely consists on looking at the relationships between our features. After drawing up a correlation matrix between our feature variables, we can see some interesting patterns between our features:
-- There are many highly correlated blocks in our correlation matrix. This indicates the nature of the dataset having many overlapping features. For example, passes completed, passes attempted, pass completion percentage, (passes) total distance are all similar features and will likely have a high correlation with each other.<br>
-- There are also many blocks of negative correlations. This may allude to the specialist nature of certain positions in football. For example, the most negative pair of statistics are 'Touches in Final third' and 'Touches in first third' - this means a player that has many touches in the final third, will likely have very little in their own third.<br>
+* There are many highly correlated blocks in our correlation matrix. This indicates the nature of the dataset having many overlapping features. For example, passes completed, passes attempted, pass completion percentage, (passes) total distance are all similar features and will likely have a high correlation with each other.<br>
+* There are also many blocks of negative correlations. This may allude to the specialist nature of certain positions in football. For example, the most negative pair of statistics are 'Touches in Final third' and 'Touches in first third' - this means a player that has many touches in the final third, will likely have very little in their own third.<br>
 
 The target variable - Player Valuation - is heavily skewed to the right. We have performed a log transformation on this to aide our model. Upon taking the transformation, the distribution has become almost normal, a trait that usually helps model accuracy. We will need to convert this back during model evaluation for interpretable results.
 
