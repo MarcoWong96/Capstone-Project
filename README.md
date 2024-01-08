@@ -22,10 +22,11 @@ This model will benefit multiple stakeholders within football. It offers clubs a
 ### Project Organization
 --------------------------------------------------------
 Notebooks (FOLDER)<br>
--- Inspiration.ipynb					<- Notebook 0 - Inspiration for this project, initial thoughts
+-- Inspiration.ipynb					<- Notebook 0 - Inspiration for this project, initial thoughts<br>
 -- Initial_EDA.ipynb					<- Notebook 1 - Initial EDA and data cleaning<br> 
 -- FinalEDA_InitialModeling.ipynb			<- Notebook 2 - Additional EDA, data preprocessing and data cleaning<br>	
--- Final_Modeling.ipynb					<- Notebook 3 - Final EDA, data modeling, evaluation and conclusion
+-- Final_Modeling.ipynb					<- Notebook 3 - Final EDA, data modeling, evaluation and conclusion<br>
+
 -- Data (FOLDER)<br>
 &nbsp;&nbsp;-- 2021-2022 Football Player Stats.csv<br>
 &nbsp;&nbsp;-- 2022-2023 Football Player Stats.csv<br>
@@ -232,17 +233,17 @@ The target variable - Player Valuation - is heavily skewed to the right. We have
 We have also decided to group several categorical factors into buckets - including nationality of players, and the standing of the teams they play for. I grouped these into multiple buckets that has different distributions for valuations. Through ANOVA and TUKEY testing, these distributions have been confirmed to have statistically different distributions. Once again, this should also aide our model.
 
 
-### Modelling
+### Modeling
 --------------------------------------------------------
 Our first baseline model has been completed. Using a linear regression, we have achieved a 5 fold cross validation R squared score of 0.375 and a 5 fold cross validation mean absolute error score of 7,661,307. Whilst this is quite a poor model in terms of accuracy, it has lead to some insight on which variables have high or low correlation. 
 
-High positive correlation coefficients include:<br>
-GcaDef:defensive actions that lead to a goal<br>
+**High positive correlation coefficients include:**<br>
+GcaDef: defensive actions that lead to a goal<br>
 Comp_Premier League: player in premier league<br>
-90's: MMnutes played divided by 90<br>
+90's: Minutes played divided by 90<br>
 Pos_FW: Position of player is forward, have very high correlation coefficients.<br>
 
-High negative correlation coefficients include:<br>
+**High negative correlation coefficients include:**<br>
 GCA: Goal creating action<br>
 Comp_Ligue 1: Player in Ligue 1<br>
 TKL: Number of players tackled<br>
