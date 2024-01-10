@@ -1,2 +1,10 @@
-folder_to_ignore/Notes
-.ipynb_checkpoints
+# Ignore folders
+.ipynb_checkpoints/
+Notes/
+Feedback/
+
+# Ignore certain files
+Marco_Wong_Capstone_Sprint2.zip
+Marco_Wong_Capstone_Sprint3.zip
+Marco_Wong_Capstone_Sprint1.zip
+Sprint0MarcoWong20231102.pdf
