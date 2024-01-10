@@ -37,13 +37,15 @@ Project Directory
 ├── Presentations
 │   ├── Presentation_1.pdf              <- Presentation 1 - Scope of project and basic EDA
 │   ├── Presentation_2.pdf              <- Presentation 2 - Data preprocessing and baseline modeling
-│   └── Final_Presentation.pdf          <- Final Presentation - Project overview and results
+│   ├── Final_Presentation.pdf          <- Final Presentation - Project overview and results
+|   └── app_Demo_video.mp4              <- Video of demo app
 │
 ├── App_Demo
 │   ├── app.py                          <- Streamlit app
 │   ├── final_model.pkl                 <- pkl file for Streamlit app
 │   ├── scaler.pkl                      <- pkl file for Streamlit app
-│   └── shap_explainer.pkl              <- pkl file for Streamlit app
+│   ├── shap_explainer.pkl              <- pkl file for Streamlit app
+|   └── app_dataframe.csv               <- dataframe for Streamlit app
 │   
 │
 ├── environment_export.yml              <- Required environment file to run packages
